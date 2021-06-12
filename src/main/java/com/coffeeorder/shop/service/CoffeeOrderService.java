@@ -31,7 +31,7 @@ public class CoffeeOrderService {
     private CoffeeRawMaterialRepository coffeeRawMaterialRepository;
 
 
-    public List<Coffee> getAllCoffee() {
+    public List<Coffee> getAllCoffees() {
         return coffeeRepository.findAll();
     }
 

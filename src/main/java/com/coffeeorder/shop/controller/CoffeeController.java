@@ -19,9 +19,9 @@ public class CoffeeController {
     @Autowired
     private CoffeeOrderService coffeeOrderService;
 
-    @GetMapping("/allCoffies")
-    public List<Coffee> getAllCoffies() {
-        return coffeeOrderService.getAllCoffee();
+    @GetMapping("/allCoffees")
+    public List<Coffee> getAllCoffees() {
+        return coffeeOrderService.getAllCoffees();
     }
 
     @GetMapping("/getCoffeePrice/{name}")
