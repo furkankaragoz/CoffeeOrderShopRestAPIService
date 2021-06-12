@@ -19,5 +19,10 @@ public class CoffeeOrderService {
         return coffeeRepository.findAll();
     }
 
+    public Coffee getCoffeeByName(String name) {
+        Coffee coffee = coffeeRepository.findByCoffeeName(name);
+        return coffee;
+    }
+
 
 }
