@@ -2,6 +2,7 @@ package com.coffeeorder.shop.controller;
 
 
 import com.coffeeorder.shop.entity.Coffee;
+import com.coffeeorder.shop.result.Result;
 import com.coffeeorder.shop.service.CoffeeOrderService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -31,6 +32,13 @@ public class CoffeeController {
             return ResponseEntity.notFound().build();
         }
         return ResponseEntity.status(HttpStatus.OK).body(coffeee.getCoffeePrice());
+
+    }
+
+    @PostMapping("/createCoffeeOrder/{name}")
+    public Result createCoffeeOrder(@PathVariable String name) {
+
+        return coffeeOrderService.createCoffeeOrder(name);
 
     }
 
