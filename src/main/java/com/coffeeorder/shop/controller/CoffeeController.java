@@ -25,13 +25,14 @@ public class CoffeeController {
     }
 
     @GetMapping("/getCoffeePrice/{name}")
-    public ResponseEntity<Integer> getCoffeePrice(@PathVariable String name) {
+    public ResponseEntity<String> getCoffeePrice(@PathVariable String name) {
 
         Coffee coffeee = coffeeOrderService.getCoffeeByName(name);
         if(coffeee == null) {
-            return ResponseEntity.notFound().build();
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body(name + " adlı kahve sistemde bulunmadığından dolayı fiyat bilgisi sağlanmamıştır.");
         }
-        return ResponseEntity.status(HttpStatus.OK).body(coffeee.getCoffeePrice());
+        String coffeLirasPrice = coffeee.getCoffeePrice() +  " ₺ ";
+        return ResponseEntity.status(HttpStatus.OK).body(coffeLirasPrice);
 
     }
 
