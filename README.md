@@ -91,9 +91,6 @@ Uç noktalar için şu an için bir rate limit bulunmamaktadır.
 
 ![orderCommit](https://user-images.githubusercontent.com/28485584/121780539-7d7a2300-cba9-11eb-8b5c-746dc91b0f46.PNG)
 
-<b> localhost:8080/api/coffeeorder/createCoffeeOrder/Mocha </b> isteği ile Kullanıcı Mocha siparişi verdiğinde listedeki tariflere göre hazırlanır ve tüketilen hammadde bilgisi 
-(hammadde ve miktar olarak) kullanıcıya aşağıdaki gibi geri bildirilir.
-
 <b> localhost:8080/api/coffeeorder/createCoffeeOrder/Caffe%20Latte </b> isteği ile Kullanıcı Caffee Latte siparişi verdiğinde listedeki tariflere göre hazırlanır ve kahve sisteminde Caffe Latte hazırlamak için gerekli olan hammade yetersiz ise aşağıdaki şekilde kullanıcıya bilgi verilir.
 
 ![notenough](https://user-images.githubusercontent.com/28485584/121780851-deeec180-cbaa-11eb-9ddb-1256584e91d8.PNG)
